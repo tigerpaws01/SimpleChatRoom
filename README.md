@@ -5,8 +5,13 @@
 <p>You will be needing NodeJS, NPM, module express, module socket.io installed.</br>
 The .msi file for installing NodeJS on Windows contains NPM itself.</p>
 <pre>
-  npm install express
-  npm install socket.io
+  $ npm install express
+  $ npm install socket.io
+</pre>
+
+<p>And then call <code>node</code> to run the server script.</p>
+<pre>
+  $ node main.js
 </pre>
 
 
