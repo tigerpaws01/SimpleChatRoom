@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>NodeJS Chat Room</title>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+        <script src="localmain.js"></script>
+        <link rel = "stylesheet" href = "https://www.w3schools.com/lib/w3.css">
+    </head>
+        
+    <body class="w3-dark-grey">
+            <p class="w3-container w3-blue-grey">Simple Chat Room Demo</p>
+        <div class="w3-container" style="width: 100%">
+            <div class="w3-display-container" style="height: 300px;margin: 10">
+                <div class="w3-display-left" style="width: 70%; height: 100%; padding: 5px">
+                        <div id="record" class="w3-light-grey w3-card-8" readonly="true" style="width: 100%;height: 100%;resize: none;overflow: scroll"></div>
+                </div>
+                <div class="w3-display-right" style="width: 30%; height: 100%; padding: 5px">
+                     <table style="width: 100%;height: 100%;" border="0">
+                        <tr>
+                            <td style="text-align: center; padding: 10px" colspan="2">
+                                <button class="w3-button w3-light-grey" onclick="clearMsg()">ALL CLEAR</button>
+                            </td>
+                        </tr>
+                        <tr class="w3-blue-grey " style=" text-align: center">
+                            <td class="w3-container" style="border-radius: 5px; padding: 10px"  colspan="2">
+                                <span style="width: 20%"></span>Host
+                                <input style="width: 80%" type="text" id="ipInput">
+                                
+                            </td> 
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;" colspan="2">
+                                        
+                                    <span id="connectStatus"></span>
+                                    <button class="w3-button w3-light-grey" id="btn_connect" onclick="init()">CONNECT</button>    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border-radius: 5px;padding:10px;" class="w3-blue-grey">Current Online</td>
+                            <td style="text-align: right"><span id="userCounter">-</span></td>
+                        </tr>
+                        
+                     </table>
+                </div>
+                    
+            </div>
+            <hr/>
+            <div class="w3-display-container" style="width: 100%;height: 150; margin: 10; padding: 5">
+                <div class="w3-display-topleft w3-container" style="width: 65%; height: 100%; text-align: right">
+                        
+                        <textarea id="msg" style="width: 100%;height: 70%;resize: none;">Enter Text...</textarea>
+                        <br/>
+                        <button class="w3-button w3-light-grey" style="height: 30%;" onclick="msgPost()">SUBMIT</button>
+                </div>
+
+                <div class="w3-display-topright w3-container w3-blue-grey w3-large" style="width: 35%; height: 70%; text-align: right;">
+                        <span style="width: 25%; display: inline-block; text-align: left">Name:</span><span id="nameDisplay" style="width: 75%;display: inline-block"></span>
+                        </br>
+                        <input type="text" id="name" style="width: 70%;" maxlength="10"></input>
+                        
+                        <button class="w3-button w3-light-grey" style="width: 25%" onclick="changeName()">CHANGE</button>
+                </div>
+                
+            </div>
+            
+        </div>
+    </body>
+</html>
