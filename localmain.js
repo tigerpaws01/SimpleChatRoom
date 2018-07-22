@@ -2,11 +2,11 @@ var socket = null;
 var errorStatus = "Connection error. Trying to reconnect...";
 var successStatus = "Connected!";
 
-
+// try to connect
+setTimeout("init()", 500);
 
 function init()
 {
-
     // Bind submit function
     $(function(){
         $('#msg').keydown(function(e){
@@ -17,7 +17,6 @@ function init()
         });
     });
     
-    btn_connect.disabled = true;
     socket = io.connect("http://" + ipInput.value);
 
     // necessary to assign callback
