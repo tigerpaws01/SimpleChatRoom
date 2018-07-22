@@ -1,5 +1,5 @@
-var IP = "140.114.207.23";
-var PORT = "8081";
+var IP = "...";     // SERVER EXTERNAL IP
+var PORT = "...";   // SERVER PORT
 
 var app = require('express')();
 var fs = require('fs');
